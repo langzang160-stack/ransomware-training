@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ransomware Ready | Security Awareness</title>
+<style>
+:root{--navy:#14243a;--blue:#2457a6;--pale:#eef4ff;--ink:#202b3c;--muted:#5c6878;--green:#176b48;--red:#a12d35;--line:#dce3ed}
+*{box-sizing:border-box}body{margin:0;background:#f5f7fb;color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+header{background:linear-gradient(120deg,#14243a,#2457a6);color:white;padding:42px 20px}
+.wrap{max-width:900px;margin:auto;padding:0 18px}header h1{font-size:clamp(2rem,5vw,3rem);line-height:1.1;margin:0 0 12px}header p{max-width:680px;margin:0;color:#e4edff}
+main{padding:28px 0 60px}.card{background:white;border:1px solid var(--line);border-radius:16px;padding:24px;margin:0 0 18px;box-shadow:0 5px 18px #172b4409}
+h2{color:var(--navy);margin:0 0 12px;font-size:1.45rem}h3{margin:0 0 8px;color:var(--navy)}ul{padding-left:22px}.callout{background:var(--pale);border-left:4px solid var(--blue);padding:14px 16px;border-radius:8px;margin:14px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}.tile{background:#f8faff;border:1px solid var(--line);border-radius:12px;padding:15px}
+button{background:var(--blue);color:white;border:0;border-radius:9px;padding:11px 17px;font-weight:650;cursor:pointer;font-size:1rem}button:hover{filter:brightness(.93)}button:focus-visible,input:focus-visible{outline:3px solid #f0b429;outline-offset:2px}
+.option{display:block;width:100%;text-align:left;background:#f8faff;color:var(--ink);border:1px solid var(--line);margin:9px 0;padding:12px 14px;font-weight:500}.option:hover{background:var(--pale)}.option[aria-pressed="true"]{border:2px solid var(--blue);background:var(--pale)}
+.feedback{padding:12px 14px;border-radius:9px;margin:12px 0;display:none}.good{display:block;background:#e9f7ef;color:var(--green)}.bad{display:block;background:#fff0f0;color:var(--red)}
+.small{color:var(--muted);font-size:.92rem}.progress{height:8px;background:#e8edf5;border-radius:10px;overflow:hidden;margin:12px 0 18px}.progress span{display:block;height:100%;width:0;background:#2d8a62;transition:width .2s}
+label.ack{display:flex;gap:10px;align-items:flex-start;margin:15px 0}input[type=checkbox]{width:19px;height:19px;margin-top:4px;accent-color:var(--blue)}
+footer{text-align:center;color:var(--muted);padding:20px;font-size:.9rem}
+@media(max-width:600px){.card{padding:18px}header{padding:34px 0}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<p style="font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:.8rem;margin-bottom:10px">Security Awareness Training</p>
+<h1>Ransomware Ready</h1>
+<p>Learn how ransomware can affect your work, spot common warning signs, and practise what to do when something seems wrong.</p>
+</div></header>
+<main class="wrap">
+<section class="card">
+<h2>1. What is ransomware?</h2>
+<p>Ransomware is malicious software that can lock you out of files or systems, often by encrypting data. The attacker then demands money to restore access or threatens to expose stolen information.</p>
+<div class="callout"><strong>Remember:</strong> Paying a ransom does not guarantee that your files will be restored or that stolen information will be deleted.</div>
+<div class="grid">
+<div class="tile"><h3>How it may arrive</h3><p>Phishing emails, unsafe attachments, malicious links, compromised websites, or unpatched software.</p></div>
+<div class="tile"><h3>What you may notice</h3><p>Files suddenly will not open, unusual file extensions appear, a ransom note appears, or your device behaves unexpectedly.</p></div>
+<div class="tile"><h3>Why it matters</h3><p>It can disrupt work, expose sensitive information, cause financial loss, and affect customers or colleagues.</p></div>
+</div>
+</section>
+<section class="card">
+<h2>2. Warning signs to watch for</h2>
+<ul>
+<li>An unexpected email urges you to act immediately or threatens account closure.</li>
+<li>The sender's address or website spelling looks slightly unusual.</li>
+<li>An attachment or link is unexpected, even if the message appears to come from someone you know.</li>
+<li>A message asks you to enable macros, install software, or share your password.</li>
+<li>Your computer displays unfamiliar pop-ups, renamed files, or a ransom demand.</li>
+</ul>
+<p class="small">Attackers can imitate trusted people and organisations. Verify unusual requests using a separate, trusted contact method.</p>
+</section>
+<section class="card">
+<h2>3. What should you do?</h2>
+<div class="grid">
+<div class="tile"><h3>Before an incident</h3><p>Use approved security tools, install updates, use unique passwords and multi-factor authentication, and keep work files in approved backed-up locations.</p></div>
+<div class="tile"><h3>If you suspect an attack</h3><p>Stop interacting with the message or device. Follow your organisation's incident procedure and contact IT/security immediately using a known channel.</p></div>
+<div class="tile"><h3>What not to do</h3><p>Do not click further, forward suspicious files, delete evidence, attempt your own cleanup, or pay the ransom unless your organisation's authorised response team directs you.</p></div>
+</div>
+<div class="callout"><strong>Key action:</strong> Report quickly—even if you only clicked a link and nothing obvious happened. Early reporting can limit damage.</div>
+</section>
+<section class="card" id="quiz">
+<h2>4. Quick knowledge check</h2>
+<p>Choose the best answer for each situation. You will receive feedback as you go.</p>
+<div class="progress" aria-label="Quiz progress"><span id="bar"></span></div>
+<p id="count" class="small">Question 1 of 4</p>
+<h3 id="question"></h3>
+<div id="options"></div>
+<div id="feedback" class="feedback" role="status" aria-live="polite"></div>
+<button id="next" style="display:none">Next question</button>
+<div id="result" style="display:none"></div>
+</section>
+<section class="card">
+<h2>5. Personal commitment</h2>
+<p>Before finishing, confirm that you understand the safe actions covered in this training.</p>
+<label class="ack"><input id="ack" type="checkbox"><span>I will check unexpected links and attachments, protect my accounts and devices, and promptly report suspected ransomware or other security incidents through my organisation's approved process.</span></label>
+<button id="finish" disabled>Complete training</button>
+<p id="finishMsg" class="feedback" role="status" aria-live="polite"></p>
+</section>
+</main>
+<footer>Ransomware Ready • Learning resource only. Always follow your organisation's security policies and incident-response instructions.</footer>
+<script>
+const questions=[
+{q:"You receive an unexpected email saying an invoice is overdue. It includes an attachment you were not expecting. What is the safest action?",a:["Open it to check whether it is genuine.","Do not open it; verify with the sender using a trusted contact method and report it if suspicious.","Forward it to your coworkers to ask if they received it."],c:1,why:"Unexpected attachments are a common delivery method. Verify separately and use your organisation's reporting process."},
+{q:"A document asks you to enable macros before you can view it. What should you do?",a:["Enable macros because the document looks professional.","Save it to a personal device and try there.","Do not enable them; close the document and report the request through approved channels."],c:2,why:"Unexpected requests to enable macros or install software can be malicious. Do not bypass security controls."},
+{q:"Your files suddenly have unfamiliar names and a ransom note appears. What should you do first?",a:["Contact IT/security immediately using a known channel and follow the incident procedure.","Pay the ransom to restore access quickly.","Try random online tools to decrypt the files."],c:0,why:"Prompt reporting lets the authorised response team contain the incident and preserve evidence. Payment or self-help does not guarantee recovery."},
+{q:"You clicked a suspicious link but nothing happened. What is the best response?",a:["Say nothing because the computer seems normal.","Report it promptly and follow the instructions from IT/security.","Delete the email and assume the issue is resolved."],c:1,why:"Some attacks are not immediately visible. Early reporting helps the security team assess possible exposure."}
+];
+let index=0,score=0,answered=false;
+const q=document.getElementById('question'),opts=document.getElementById('options'),fb=document.getElementById('feedback'),next=document.getElementById('next'),bar=document.getElementById('bar'),count=document.getElementById('count'),result=document.getElementById('result');
+function render(){answered=false;fb.className='feedback';fb.textContent='';next.style.display='none';count.textContent=`Question ${index+1} of ${questions.length}`;bar.style.width=`${index/questions.length*100}%`;q.textContent=questions[index].q;opts.innerHTML='';questions[index].a.forEach((answer,i)=>{const b=document.createElement('button');b.className='option';b.textContent=answer;b.addEventListener('click',()=>choose(i,b));opts.appendChild(b)});}
+function choose(choice,button){if(answered)return;answered=true;const item=questions[index];[...opts.children].forEach(b=>b.disabled=true);if(choice===item.c){score++;fb.className='feedback good';fb.textContent='Correct. '+item.why}else{fb.className='feedback bad';fb.textContent='Not quite. '+item.why}button.setAttribute('aria-pressed','true');next.textContent=index===questions.length-1?'See results':'Next question';next.style.display='inline-block';}
+next.addEventListener('click',()=>{index++;if(index<questions.length){render()}else{bar.style.width='100%';q.textContent='Training quiz complete';opts.innerHTML='';fb.className='feedback good';fb.textContent=`You scored ${score} out of ${questions.length}. ${score===questions.length?'Excellent work!':'Review the guidance above and remember the safe response steps.'}`;next.style.display='none';result.style.display='block';result.textContent='You can review the training sections above at any time.'}});
+document.getElementById('ack').addEventListener('change',e=>document.getElementById('finish').disabled=!e.target.checked);
+document.getElementById('finish').addEventListener('click',()=>{const m=document.getElementById('finishMsg');m.className='feedback good';m.textContent='Thank you. Your acknowledgement is recorded in this page session. This demo does not send or store your information.';});
+render();
+</script>
+</body>
+</html>
